@@ -38,6 +38,7 @@ export default function Gameboard({setScore}) {
       //to reset the set Clicked Function
       setClicked([]);
     }else{
+      
       setScore((newScore)=>{
         return newScore+1
       });
