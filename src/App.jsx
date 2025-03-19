@@ -5,7 +5,7 @@ import {useState} from 'react';
 function App() {
   const [score, setScore]=useState(0);
   const [highScore,setHighScore]= useState(0);
-
+  const [gameOver,setGameOver] = useState(false);
 
   if (score > highScore){
     let newScore = score;
@@ -18,7 +18,7 @@ function App() {
     <div className="flex flex-col items-center">
       <Header/>
       <Score score={score} highScore={highScore}/>
-      <Gameboard setScore={setScore} />
+      <Gameboard setScore={setScore} setGameOver={setGameOver}/>
     </div>
      
     </>
