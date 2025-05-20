@@ -13,7 +13,7 @@ const DUMMY_CARDS = [
   { name: 'Dummy6', image: pepeCoin },
   { name: 'Dummy7', image: Doink },
   { name: 'Dummy8', image: Doink },
-  { name: 'Dummy9', image: pepeCoin },
+  { name: 'Dummy9', image: pepeCoin }, 
   { name: 'Dummy10', image: Doink },
   // { name: 'Dummy11', image: pepeCoin },
   // { name: 'Dummy12', image: Doink },
@@ -40,7 +40,7 @@ export default function Gameboard({ setScore, setGameOver }) {
   function shuffleCards() {
     const shuffled = [...DUMMY_CARDS].sort(() => Math.random() - 0.5);
     const unique = uniqueCard();
-    shuffled.fill(unique, 0, 1);
+    shuffled.push(unique)
     setCards(shuffled);
     console.log(unique);
 

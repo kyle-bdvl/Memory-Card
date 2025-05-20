@@ -8,6 +8,7 @@ export default function Modal(){
       <p>{gameState ? 'you have lost' :null }</p>
       <button>
         Play Again!
+        
       </button>
     </dialog>
   ),document.getElementById('modal');
